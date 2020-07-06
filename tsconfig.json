@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "none",
+        "target": "ES3"
+    },
+    "files": [
+        "app/_all.ts"
+    ]
+}
