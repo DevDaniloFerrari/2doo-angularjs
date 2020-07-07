@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="assets/css/styles-1.0.0.min.css" />
   </head>
   <body layout="column">
-    <section layout="row" flex>
-      <md-sidenav md-component-id="left" md-is-locked-open="true">
+    <section layout="row" flex ng-controller="sideBarCtrl as vm">
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
         <md-toolbar>
           <h1 class="md-toolbar-tools">2doo</h1>
         </md-toolbar>
@@ -31,7 +31,7 @@
       <md-content>
           <md-toolbar>
               <div class="md-toolbar-tools">
-                  <md-button class="md-icon-button" aria-label="Menu" hide-gt-md>
+                  <md-button class="md-icon-button" aria-label="Menu" ng-click="vm.toggle()" hide-gt-md>
                       <md-icon md-svg-icon="assets/img/icons/menu.svg"></md-icon>
                   </md-button>
                   <h2 class="hide-gt-md">2doo</h2>
