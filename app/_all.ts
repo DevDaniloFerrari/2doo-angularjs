@@ -7,8 +7,11 @@
 /// <reference path="Startup.ts" />
 
 /// <reference path="contracts/IRootScope.ts" />
+/// <reference path="contracts/ITodoService.ts" />
 /// <reference path="models/TodoList.ts" />
 /// <reference path="models/TodoItem.ts" />
+
+/// <reference path="services/TodoService.ts" />
 
 /// <reference path="controllers/HomeController.ts" />
 /// <reference path="controllers/SideBarController.ts" />

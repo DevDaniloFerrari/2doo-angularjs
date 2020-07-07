@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="assets/css/styles-1.0.0.min.css" />
   </head>
-  <body layout="column">
+  <body layout="column" ng-cloak>
     <section layout="row" flex ng-controller="sideBarCtrl as vm">
       <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
         <md-toolbar>
@@ -19,16 +19,16 @@
           <md-subheader class="md-no-stick">
             Minhas Listas
           </md-subheader>
-          <md-list-item href="#">
-            <p>Item da Lista</p>
+          <md-list-item href="#/todos/{{ TodoLists.indexOf(list) }}" ng-click="vm.close()" ng-repeat="list in TodoLists | orderBy: 'title'">
+            <p>{{ list.title }}</p>
           </md-list-item>
         </md-content>
         <br>
         <div layout="row" layout-align="center center">
-            <md-button md-no-ink class="md-primary">Nova Lista</md-button>
+            <md-button md-no-ink class="md-primary" ng-click="vm.showAddList()">Nova Lista</md-button>
         </div>
       </md-sidenav>
-      <md-content>
+      <md-content flex>
           <md-toolbar>
               <div class="md-toolbar-tools">
                   <md-button class="md-icon-button" aria-label="Menu" ng-click="vm.toggle()" hide-gt-md>
