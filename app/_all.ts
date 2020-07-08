@@ -5,6 +5,7 @@
 /// <reference path="Modules.ts" />
 /// <reference path="Routes.ts" />
 /// <reference path="Startup.ts" />
+/// <reference path="Config.ts" />
 
 /// <reference path="contracts/IRootScope.ts" />
 /// <reference path="contracts/ITodoService.ts" />
