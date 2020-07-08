@@ -6,6 +6,10 @@
   text-decoration: line-through;
 }
 
+.img-responsive {
+  width: 100%;
+}
+
 [ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],
