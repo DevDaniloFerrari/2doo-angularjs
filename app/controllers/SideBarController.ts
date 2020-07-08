@@ -4,7 +4,13 @@ import * as angular from "angular";
 
 module doo {
   export class SideBarController {
-    static $inject = ["$mdSidenav", "$mdDialog", 'todoService'];
+    static $inject = [
+      "$mdSidenav",
+      "$mdDialog",
+      "$mdBottomSheet",
+      "$location",
+      "todoService",
+    ];
 
     private todoService: ITodoService;
     private listName: string;
@@ -12,6 +18,8 @@ module doo {
     constructor(
       private $mdSidenav: ng.material.ISidenavService,
       private $mdDialog: ng.material.IDialogService,
+      private $mdBottomSheet: ng.material.IBottomSheetService,
+      private $location: ng.ILocationService,
       private service: ITodoService
     ) {
       this.todoService = service;
@@ -43,6 +51,18 @@ module doo {
     addList(): void {
       this.todoService.addTodoList(this.listName);
       this.$mdDialog.cancel();
+    }
+
+    showBottomMeu(): void {
+      this.$mdBottomSheet.show({
+        templateUrl: "pages/bottom-menu.html",
+      });
+    }
+
+    clearData(): void {
+      this.todoService.clearData();
+      this.$location.path('/');
+      this.$mdBottomSheet.cancel();
     }
   }
 
