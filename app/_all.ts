@@ -8,6 +8,8 @@
 
 /// <reference path="contracts/IRootScope.ts" />
 /// <reference path="contracts/ITodoService.ts" />
+/// <reference path="contracts/IRouteParams.ts" />
+
 /// <reference path="models/TodoList.ts" />
 /// <reference path="models/TodoItem.ts" />
 
@@ -15,3 +17,4 @@
 
 /// <reference path="controllers/HomeController.ts" />
 /// <reference path="controllers/SideBarController.ts" />
+/// <reference path="controllers/TodoController.ts" />

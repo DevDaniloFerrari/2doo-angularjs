@@ -19,7 +19,7 @@
           <md-subheader class="md-no-stick">
             Minhas Listas
           </md-subheader>
-          <md-list-item href="#/todos/{{ TodoLists.indexOf(list) }}" ng-click="vm.close()" ng-repeat="list in TodoLists | orderBy: 'title'">
+          <md-list-item class="todo-list" href="#/todos/{{ TodoLists.indexOf(list) }}" ng-click="vm.close()" ng-repeat="list in TodoLists | orderBy: 'title'">
             <p>{{ list.title }}</p>
           </md-list-item>
         </md-content>

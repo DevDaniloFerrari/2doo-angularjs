@@ -14,3 +14,7 @@
 .x-ng-cloak {
   display: none !important;
 }
+
+.todo-list {
+  height: 50px;
+}

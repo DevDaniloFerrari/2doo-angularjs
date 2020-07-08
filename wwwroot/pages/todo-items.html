@@ -1,0 +1,18 @@
+<md-content class="md-padding" layout="column">
+  <md-list ng-cloak>
+    <md-subheader class="md-no-sticky"
+      >{{ TodoLists[vm.index].title }}</md-subheader
+    >
+    <md-list-item
+      ng-repeat="item in TodoLists[vm.index].todos | orderBy: vm.order"
+    >
+      <p ng-class="{ 'done': item.done }">{{ item.title }}</p>
+      <md-checkbox
+        class="md-secondary"
+        ng-model="item.done"
+        ng-click="vm.save()"
+        aria-label="Status"
+      ></md-checkbox>
+    </md-list-item>
+  </md-list>
+</md-content>
