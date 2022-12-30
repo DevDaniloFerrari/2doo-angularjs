@@ -21,7 +21,7 @@
     "angular-route": "^1.8.0",
     "angular-sanitize": "^1.8.0",
     "tsc": "^1.20150623.0",
-    "tsd": "^0.6.5",
+    "tsd": "^0.25.0",
     "typescript": "^1.8.10"
   },
   "devDependencies": {
